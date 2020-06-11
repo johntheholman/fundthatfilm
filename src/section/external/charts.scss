@@ -1,0 +1,16 @@
+#internationalChart.chartjs-render-monitor,
+#northAmericaChart.chartjs-render-monitor,
+#globalChart.chartjs-render-monitor,
+#otherChart.chartjs-render-monitor {
+    width: 80% !important;
+    margin: 0 auto 1% auto;
+}
+
+.chart-header{
+    color:$box-shadow-color;
+    text-shadow: 2px 2px 2px $black;
+    font-size: 28px;
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 4px;
+    margin-top: 1%;
+}

@@ -1,0 +1,28 @@
+@import './variables';
+
+@media (orientation: portrait){
+  .contact {
+    margin-bottom: 18%;
+  }
+  
+  .contact-us-form {
+    .multiple-inputs-fields {
+      .two-input-grouping {
+        .input-container {
+          .required {
+            margin: 0;
+          }
+        }
+      }
+    }
+        
+    .message-input {
+      .textarea-container {
+        .required {
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+}

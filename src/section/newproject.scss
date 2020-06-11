@@ -1,0 +1,148 @@
+@import './variables';
+
+.new-project-form {
+  margin-top: 5%;
+}
+
+.new-project-form-page-2 {
+  margin: 8% auto;
+}
+
+.dropdown-container {
+  width: 15vw;
+}
+
+.autocomplete-input {
+  width: 27.5vw;
+}
+
+.four-input-grouping {
+  margin: 0 1%;
+  min-width: 160px;
+}
+
+.page2-label {
+  color: $green;
+  margin: 5% 0 0 0;
+}
+
+.new-project-buttons {
+  z-index: -1;
+}
+
+#year-input, 
+#mpaa-input, 
+#genre-input, 
+#production-stage-input {
+  color: $white;
+}
+
+.meets-container {
+  margin-bottom: 0.1%;
+  width: 10vw;
+  text-align: center;
+
+  .meets {
+    color: $white;
+    font-size: 1.1em;
+    line-height: 9.5em;
+    display: inline-block;  
+  }
+}
+
+/*-------------- MOVIE SUGGESTIONS --------------*/
+
+.suggestion-list {
+  list-style-type: none;
+  background-color: $white;
+  border-radius: 3px;
+}
+
+.suggestion-list li {
+  padding: 0 2%;
+  cursor: pointer;
+}
+
+.suggestion-list li:hover {
+  background-color: $green;
+  color: $white;
+}
+
+.movie-poster {
+  height: 50px;
+  margin: 1% 0;
+}
+
+/*-------------- TOOLTIPS --------------*/
+
+.fa-question-circle {
+  display: inline-block;
+  margin-left: 2%;
+  position: relative;
+  color: $white;
+}
+
+.fa-question-circle .tooltiptext {
+  visibility: hidden;
+  width: 15vw;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding: 50%;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  left: 550%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext.production-tooltip {
+  display: inline-block;
+  bottom: -780%;
+}
+
+.definition {
+  display: inline-block;
+  margin-bottom: 5%;
+}
+
+.fa-question-circle:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*-------------- MEDIA QUERIES --------------*/
+
+@media (orientation: portrait){
+  .new-project {
+    margin-bottom: 8%;
+  }
+
+  .new-project-title {
+    margin-bottom: 16%;
+  }
+
+  .fa-question-circle .tooltiptext {
+    width: 38vw;
+  }
+
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .autocomplete-input {
+    width: 100%;
+  }
+
+  .new-project-buttons {
+    position: static;
+    transform: none;
+  }
+
+  .meets-container {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+@import './variables';
+
+.sign-in-form {
+  width: 50%;
+  margin: 10% auto;
+}
+
+@media (orientation: portrait){
+  .sign-in-form {
+    width: 100%;
+    margin-top: 35%;
+
+    .no-disclaimer {
+      margin-top: 30%;
+    }
+  }
+}
+
+@media only screen and (max-height: 450px){
+  .sign-in {
+    padding: 3% 75px 0 75px;
+
+    .signin-title {
+      margin-bottom: 7%;
+    }
+
+    .sign-in-form {
+      width: 100%;
+      margin: 5% auto 0 auto;
+
+      .label {
+        margin: 0 5%;
+      }
+
+      .input-container {
+        p {
+          margin: 0;
+        }
+      }
+
+      .no-disclaimer {
+        margin-top: 3%;
+      }
+    }
+  }
+}
