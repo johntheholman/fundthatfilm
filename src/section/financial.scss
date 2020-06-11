@@ -1,0 +1,159 @@
+@import './variables';
+
+.share_button {
+  position: absolute;
+  top: 5px;
+  right: 2%;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+.nav.nav-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  border: none; 
+  margin-bottom: 3%;
+
+  .nav-item.nav-link {
+    width: 200px;
+    display: inline-block;
+    font-size: 150%;
+    font-weight: 500;
+    border: 2px solid $green;
+    border-radius: 4px;
+    color: $green;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 13px;
+    margin: 2%;
+    outline: none;
+    text-align: center;
+  }
+
+  .nav-item.nav-link:hover {
+    background-image: url('./assets/images/light_green.jpg');
+    background-color: $green;
+    color: $black;
+  }
+
+}
+
+#financial-container {
+  width: 90%;
+  margin: 20px auto 75px;
+}
+
+.card-financial-global-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5%;
+  
+  .card.financial-card {
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid $green;
+
+    .financial-header {
+      font-size: 1.2rem;
+      height: 8vh;
+      line-height: 8vh;
+      color:$black;
+      text-align: center;
+      background-image: url('./assets/images/light_green.jpg');
+      margin: 0;
+    }
+
+    .financial-body {
+      height: 100%;
+      font-size: 1.2rem;
+      color: $white;
+      padding: 2% 2% 1% 2%;
+    }
+
+    .international-body,
+    .global-body,
+    .other-body,
+    .northamerica-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .tnh {
+      justify-content: flex-end;
+      .first-paragraph {
+        margin-right: 5%;
+      }
+    }
+
+    .tne {
+      font-size: 1.3rem;
+      font-weight: 700;
+      justify-content: space-evenly;
+    }
+  }
+
+  .international-card,
+  .global-card,
+  .other-card,
+  .northamerica-card {
+    width: 80%;
+  }
+}
+
+.northamerica-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@media (orientation: portrait){
+  #financial-container {
+    margin: 115px auto 75px;
+  }
+
+  .financial-charts-header {
+    margin-top: 70px;
+  }
+
+  .graph-container {
+    display: none;
+  }
+
+
+  .card-financial-global-wrapper {
+    display: block;
+    
+    .card.financial-card {
+      width: 100%;
+
+      .financial-header {
+  
+      }
+
+      .international-body,
+      .global-body,
+      .other-body,
+      .northamerica-body {
+        display: block;
+      }
+    }
+
+    .international-card,
+    .global-card,
+    .other-card,
+    .northamerica-card {
+      width: 100%;
+    }
+  }
+
+  .share_button {
+    top: 40px;
+  }
+}

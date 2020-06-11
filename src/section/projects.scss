@@ -1,0 +1,83 @@
+@import './variables';
+
+.no-projects {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h2 {
+    color: $green;
+    margin-bottom: 10%;
+  }
+}
+
+.project-container {
+  width: 60vw;
+  margin: 5% auto;
+  padding: 3% 3% 1.5% 3%;
+  color: #ffffff;
+  border: 5px solid #b0f1b1;
+  box-shadow: 0px 0px 25px #62e364;
+  border-radius: 10px;
+
+  h2 {
+    color: $green;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .four-fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    font-size: 1.3em;
+  }
+
+  .two-fields {
+    display: flex;
+    font-size: 1.3em;
+    margin-bottom: 3%;
+
+    .production {
+      width: 50%;
+    }
+
+    .logline {
+      width: 50%;
+    }
+  }
+
+  .synopsis {
+    font-size: 1.3em;
+    margin-bottom: 3%;
+  }
+
+  .my-projects-button-container {
+    text-align: center;
+    margin-top: 5%;
+  }
+}
+
+@media (orientation: portrait){
+  .project-container {
+    width: 90%;
+    padding-bottom: 5%;
+
+    .four-fields {
+      display: block;
+    }
+
+    .two-fields {
+      display: block;
+
+      .production,
+      .logline {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./assets/images/black_background.jpg');
+  background-attachment: fixed;
+  font-weight: 500;
+}
+
+.main-container {
+  padding: 3% 75px;
+}
+
+h1 {
+  color: $green;
+  text-align: center;
+  font-size: 300%;
+  letter-spacing: 5px;
+  margin-bottom: 3%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.green {
+  color: $green;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.yes-scroll {
+  height: auto;
+  overflow: visible;
+}
+
+.show {
+  display: block;
+}
+
+.dontShow {
+  display: none;
+}
+
+/*-------------- INPUT FIELDS AND LABELS --------------*/
+
+.label {
+  color: $green;
+  margin: 3% 5%;
+}
+
+.title-label {
+  color: $green;
+  margin: 1.5% 5%;
+}
+
+.suggestion-label {
+  color: $green;
+  margin: 3.5% 0;
+}
+
+.textarea-label {
+  color: $green;
+  margin-top: 3%;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $green;
+  outline: none;
+  color: white;
+  padding: 5px;
+  height: 5.5vh;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0px 0px 20px $green;
+}
+
+textarea {
+  width: 66.5vw;
+}
+
+.required {
+  color: $white;
+  height: 24px;
+  margin-top: 5px;
+}
+
+.input-container {
+  margin: 0 5%;
+}
+
+.message-input {
+  width: 66.5vw;
+  margin: 0 auto;
+}
+
+.multiple-inputs-fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.two-input-grouping {
+  width: 35vw;
+}
+
+.single-line-input {
+  width: 74vw;
+  margin: 0 auto;
+}
+
+/*-------------- BUTTONS --------------*/
+
+.button-container {
+  width: 500px;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.page-button {
+  width: 200px;
+  display: inline-block;
+  font-size: 150%;
+  font-weight: 500;
+  border: 2px solid $green;
+  border-radius: 4px;
+  color: $green;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 13px;
+  margin: 2%;
+  outline: none;
+}
+
+.page-button:hover {
+  background-image: url('./assets/images/light_green.jpg');
+  background-color: $green;
+  color: black;
+}
+
+button:focus {
+ outline:0;
+}
+
+/*-------------- MEDIA QUERIES --------------*/
+
+@media (orientation: portrait){
+
+  .main-container {
+    padding: 3% 7%;
+  }
+
+  h1 {
+    margin-top: 45px;
+    font-size: 200%;
+    font-weight: 700;
+  }
+
+  .button-container {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  .multiple-inputs-fields {
+    display: block;
+  }
+
+  .two-input-grouping {
+    width: 100%;
+  }
+
+  .single-line-input {
+    width: 100%;
+  }
+
+  .message-input {
+    margin: 0;
+    width: 100%;
+  }
+
+  .textarea-label,
+  .textarea-container {
+    margin: 0 5%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .no-disclaimer {
+    bottom: 3%;
+  }
+}
+
+@media only screen and (max-height: 450px){
+
+  h1 {
+    font-size: 275%;
+  }
+
+  .input {
+    padding: 15px 0;
+  }
+
+  .button-container {
+      position: static;
+      transform: none;
+      width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+@import './variables';
+  
+.movie-info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 5%;
+
+  .movies {
+    width: 25vw;
+    color: $white;
+    text-align: center;
+
+      .movie-image {
+        width: 60%;
+        margin-bottom: 5%;
+        filter: drop-shadow(0px 0px 10px $green);    
+      }
+
+      .movie-title-wrapper {
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+  }
+}
+
+@media (orientation: portrait){
+
+  .details-title {
+    margin-bottom: 15%;
+  }
+
+  .movie-info-container {
+    display: block;
+
+    .movies {
+      width: 100%;
+      margin-bottom: 10%;
+
+        p {
+          margin: 0;
+        }
+    }
+  }
+
+  .comparables-buttons {
+    position: static;
+    transform: none;
+  }
+}

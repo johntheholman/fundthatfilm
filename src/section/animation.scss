@@ -1,0 +1,62 @@
+
+.fa-angle-down{
+    font-weight: 900;
+    font-size: 32px;
+    position: relative;
+    left: 50%;
+    top:-68px;
+    color:White; 
+    animation:bounce 2s infinite;
+  }
+  
+  .fa-angle-up:hover{
+    font-size:35px;;
+  }
+  
+  
+  @keyframes bounce{
+    0%, 50%, 100%{
+      transform:translateY(0);
+    }
+    25%{
+      transform:translateY(-20px);
+    }
+    75%{
+      transform:translateY(-15px);
+    }
+  }
+
+#arrow-icon-up{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0%;
+    margin: 0 auto;
+    text-align: center;
+    z-index:1;
+    cursor: pointer;
+    &.hideArrow{
+      display:none;
+    }
+}
+        .fa-angle-up{
+        font-weight: 900;
+        bottom: 42px;
+        font-size: 32px;
+        position: relative;
+        color: White;
+        z-index: 1;
+        animation: bounce 2s infinite;
+  }
+
+
+@keyframes bounce{
+  0%, 50%, 100%{
+  }
+  25%{
+    transform:translateY(-20px);
+  }
+  75%{
+    transform:translateY(-15px);
+  }
+}

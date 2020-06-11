@@ -1,0 +1,75 @@
+@import './variables';
+
+.new-account-form {
+  width: 70vw;
+  margin: 0 auto;
+
+  .new-account-inputs {
+    margin-top: 10%;
+
+    .register-label {
+      color: $green;
+      margin: 1% 5%;
+    }
+  }
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background-color: $transparent-black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .register-modal {
+    height: 250px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('./assets/images/black_background.jpg');
+    background-size: cover;
+    color: #62e364;
+    border: 5px solid #a0eea2;
+    box-shadow: 0px 0px 40px #62e364;
+    padding: 2%;
+    text-align: center;
+
+    .modal-buttons {
+      display: block;
+    }
+  }
+}
+
+@media (orientation: portrait){
+  .new-account-form {
+
+    .new-account-inputs {
+      margin-top: 30%;
+
+      .register-label {
+        margin: 1% 0;
+      }
+
+      .input-container {
+        margin: 0;
+      }
+    }
+  }
+
+  .modal-container {
+    .register-modal {
+      width: 80vw;
+      height: 50vh;
+      padding: 5%;
+
+      .modal-buttons {
+        display: block;
+        margin-top: 20%;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import './variables';
+
+.disclaimer-content {
+  background-image: url('./assets/images/light_green.jpg');
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  .disclaimer-text{
+    font-size: 1rem;
+    padding: 10px 0;
+    color: $black;
+    text-align: center;
+    margin: 0px 0;   
+  }
+}
