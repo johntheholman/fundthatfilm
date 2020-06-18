@@ -23,9 +23,9 @@ foreach($required_keys AS $key){
     };
 };
 
-$query = "INSERT INTO `projects` SET `runtime`= '{$request["runtime"]}', 
-            `logline`= '{$request["logline"]}', 
-            `title`= '{$request["title"]}', 
+$query = "INSERT INTO `projects` SET `runtime`= '{$request["runtime"]}',
+            `logline`= '{$request["logline"]}',
+            `title`= '{$request["title"]}',
             `year`= '{$request["releasedYear"]}',
             `genre`= '{$request["genre"]}',
             `mpaa_rating`= '{$request["mpaa"]}',
@@ -40,15 +40,35 @@ if($result){
     $output['error']=mysqli_error($db);
 }
 
+$queryTitle=' ';
+$title='';
+
+if($bodyVars){
+    foreach ($bodyVars as $key => $value) {
+        $queryTitle.= 'c.`title`= "'.$value.'"';
+        if($key === 'title1'){
+            $queryTitle.= ' OR ';
+        }
+    }
+} else {
+    exit(500);
+}
+
+
+$id_query = 'SELECT c.`id`, c.`title`
+                FROM `comparables` AS c
+                WHERE '.$queryTitle.'';
+
+$id_result = $db -> query($id_query);
 $queryTitle=' c.`title`= '.json_encode($request['film1']).' OR  c.`title`= '.json_encode($request['film2']);
 $id_query = 'SELECT c.`id`,c.`title`
                 FROM `comparables` AS c
                 WHERE '.$queryTitle.'';
-
 $id_result=$db->query($id_query);
+// Need to add new comparables if the result does not have 2 comparable pictures
+
 $insert_ids=[];
 $comparables_ids=[];
-
 
 while($row_id=$id_result->fetch_assoc()){
     $comparables_ids[]=$row_id['id'];
@@ -77,9 +97,6 @@ if(isset($_SESSION['user_id'])){
         throw new Exception('failed to insert new project');
     };
 }
-
-
-
 
 $json_output = json_encode($output);
 print($json_output);
