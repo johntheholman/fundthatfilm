@@ -39,7 +39,6 @@ if($result){
 }else{
     $output['error']=mysqli_error($db);
 }
-print_r($result);
 
 $queryTitle=' ';
 $title='';
@@ -68,7 +67,6 @@ $id_query = 'SELECT c.`id`,c.`title`
 $id_result=$db->query($id_query);
 // Need to add new comparables if the result does not have 2 comparable pictures
 
-print_r($id_result);
 $insert_ids=[];
 $comparables_ids=[];
 
@@ -99,9 +97,6 @@ if(isset($_SESSION['user_id'])){
         throw new Exception('failed to insert new project');
     };
 }
-
-
-
 
 $json_output = json_encode($output);
 print($json_output);
