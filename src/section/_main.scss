@@ -12,7 +12,7 @@ body {
 }
 
 .main-container {
-  padding: 3% 75px;
+  padding: 3% 75px 0% 75px;
 }
 
 h1 {
@@ -171,7 +171,7 @@ button:focus {
 @media (orientation: portrait){
 
   .main-container {
-    padding: 3% 7%;
+    padding: 3% 7% 0% 7%;
   }
 
   h1 {
